@@ -24,6 +24,7 @@ RUN pip install jupyter-archive
 RUN jupyter nbextension enable --py widgetsnbextension
 
 RUN git clone https://github.com/JoePenna/Dreambooth-Stable-Diffusion
+RUN git checkout 605faeaa2f0656bf31ab79749fb5d96b3ca2e69f
 RUN uses_reg = False
 RUN wget https://sexy.canine.wf/file/yiffy-ckpt/yiffy-e18.ckpt -O /workspace/Dreambooth-Stable-Diffusion/model.ckpt
 RUN mkdir -p /workspace/Dreambooth-Stable-Diffusion/training_images
